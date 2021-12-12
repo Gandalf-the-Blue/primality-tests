@@ -17,4 +17,4 @@ def trial_division_wheel_factorization(n):
         for i in checks:
             if n%i==0:
                 is_prime = False
-    print(is_prime)
+    return(is_prime)
