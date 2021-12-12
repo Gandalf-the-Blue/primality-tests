@@ -8,4 +8,4 @@ def aks_test(n):
         coeff = math.comb(n,r)
         if coeff%n!=0:
             is_prime=False
-    print(is_prime)
+    return is_prime

@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 test_numbers = []
 
-for i in range(10,100):
+for i in range(10,50):
     rnd = random.random()
     rnd = math.ceil(rnd*pow(10,math.ceil(i/10)))
     test_numbers.append(rnd)
@@ -23,7 +23,11 @@ for i in test_numbers:
     aks_times.append(float(timeit.timeit('aks_test(i)','from __main__ import aks_test,i')))
     print(i)
 
-plt.plot(test_numbers,miller_rabin_times,'b^')
-plt.plot(test_numbers,aks_times,'rs')
-plt.plot(test_numbers,trial_division_wheel_factorization_times,'g^')
+plt.plot(test_numbers,miller_rabin_times,'^-b')
+plt.plot(test_numbers,aks_times,'s-r')
+plt.plot(test_numbers,trial_division_wheel_factorization_times,'*-g')
+plt.xlabel('n')
+plt.ylabel('time (in seconds)')
+plt.title("Time Taken for different Primality Tests")
+plt.legend(['Miller-Rabin',"AKS","Trial Division"])
 plt.show()
