@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 test_numbers = []
 
-for i in range(10,50):
+for i in range(10,20):
     rnd = random.random()
     rnd = math.ceil(rnd*pow(10,math.ceil(i/10)))
     test_numbers.append(rnd)
