@@ -33,3 +33,9 @@ if n < 3,317,044,064,679,887,385,961,981, it is enough to test a = 2, 3, 5, 7, 1
 # 3. AKS Test
 
 The AKS Test checks the coefficients of $(x-1)^n - (x^n - 1)$. If all the coefficients are divisible by n, then n is prime.
+
+# Results
+
+We see that the fastest is the Miller-Rabin test.
+
+![Time Taken for Primality Tests](img/initial_test_all_three.png)
