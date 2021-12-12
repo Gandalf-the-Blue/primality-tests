@@ -3,7 +3,7 @@ import math
 import numpy as np
 from tests.miller_rabin_test import *
 from tests.trial_division_wheel_factorization import *
-from aks_test import *
+from tests.aks_test import *
 import timeit
 import matplotlib.pyplot as plt
 
