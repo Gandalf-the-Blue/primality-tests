@@ -39,4 +39,5 @@ def miller_rabin(n):
             for a in witnesses[dict_key]:
                 if pow(a,d,n)!=1:
                     is_prime=False
+                    break
     return(is_prime)
