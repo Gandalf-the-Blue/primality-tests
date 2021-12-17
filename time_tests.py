@@ -9,21 +9,18 @@ import matplotlib.pyplot as plt
 
 test_numbers = []
 
-for i in range(10,15):
+for i in range(1,100):
     rnd = random.random()
     rnd = math.ceil(rnd*pow(10,i))
     if rnd%2==0:
         rnd +=1
     test_numbers.append(rnd)
-
-miller_rabin_times = []
-trial_division_wheel_factorization_times = []
-aks_times = []
-for i in test_numbers:
-    miller_rabin_times.append(float(timeit.timeit('miller_rabin(i)','from __main__ import miller_rabin,i')))
-    trial_division_wheel_factorization_times.append(float(timeit.timeit('trial_division_wheel_factorization(i)','from __main__ import trial_division_wheel_factorization,i')))
-    aks_times.append(float(timeit.timeit('aks_test(i)','from __main__ import aks_test,i')))
-    print(i)
+print(test_numbers)
+miller_rabin_times = [float(timeit.timeit('miller_rabin(i)','from __main__ import miller_rabin,i')) for i in test_numbers]
+print("MR Done")
+trial_division_wheel_factorization_times = [float(timeit.timeit('trial_division_wheel_factorization(i)','from __main__ import trial_division_wheel_factorization,i')) for i in test_numbers]
+print("TD Done")
+aks_times = [float(timeit.timeit('aks_test(i)','from __main__ import aks_test,i')) for i in test_numbers]
 
 plt.plot(test_numbers,miller_rabin_times,'^b')
 plt.plot(test_numbers,aks_times,'sr')

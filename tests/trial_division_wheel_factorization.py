@@ -14,8 +14,7 @@ def trial_division_wheel_factorization(n):
         max_check = math.ceil(math.sqrt(n))
         checks = np.array(range(3,max_check,2))
         checks = [s for s in checks if s%30==1 or s%30==7 or s%30==11 or s%30==13 or s%30==17 or s%30==19 or s%30==23 or s%30==29]
-        for i in checks:
-            if n%i==0:
-                is_prime = False
-                break
+        checker = [n%i for i in checks]
+        if 0 in checker:
+            is_prime=False
     return(is_prime)
