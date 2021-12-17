@@ -53,6 +53,8 @@ The AKS Test checks the coefficients of $'(x-1)^n - (x^n - 1)'$. If all the coef
 
 It's not abundantly clear which algorithm is faster so let's try with larger n.
 
-![Time Taken for Primality Tests for all 3 tests with larger n](img/)
+![Time Taken for Primality Tests for all 3 tests with n from 10^10 -> 10^30](img/larger_numbers_10-30.png)
 
+![Time Taken for Primality Tests for all 3 tests with n from 10^30 -> 10^50](img/larger_numbers_30-50.png)
 
+Both these graphs show the Miller Rabin Test to be the fastest among the three.
